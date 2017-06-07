@@ -24,7 +24,9 @@ Pod::Spec.new do |spec|
                       'src/symbolize.cc',
                       'src/utilities.cc',
                       'src/vlog_is_on.cc'
+  spec.exclude_files       = "src/windows/**/*"
   spec.public_header_files = 'src/glog/*.h'
+  spec.libraries           = "stdc++"
   spec.pod_target_xcconfig = { "USE_HEADERMAP" => "NO",
                                "HEADER_SEARCH_PATHS" => "$(PODS_TARGET_SRCROOT)/src" }
 
